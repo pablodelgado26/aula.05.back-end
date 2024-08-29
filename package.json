@@ -1,7 +1,7 @@
 {
   "name": "aula-05",
   "version": "1.0.0",
-  "description": "Projeto inicial de progrmação back-end",
+  "description": "Projeto inicial de programação back-end",
   "main": "server.js",
   "type": "module",
   "scripts": {
