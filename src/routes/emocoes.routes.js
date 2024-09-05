@@ -41,8 +41,8 @@ emocoesRoutes.post("/", (req, res) => {
 
 emocoesRoutes.get("/:id", (req, res) => {
     const { id } = req.params;
-    const emocoes = emocoes.find((emotion)=> emotion.id == id)
-    if(!emocoes){
+    const emocao  = emocoes.find((emotion)=> emotion.id == id)
+    if( emocao ){
         return res.status(404).send({
             message: "Emoção não encontrada!"
         });
