@@ -1,8 +1,8 @@
-import { Router } from "express"
+import { Router } from "express";
 
-const personagensRoutes = Router()
+const personagensRoutes = Router();
 
-const personagens = [
+let personagens = [
     {
         id: 100,
         nome: "Brian O'Conner",
@@ -21,9 +21,9 @@ const personagens = [
         vivo: true,
         studio: " Toei Animation "
     }
-]
+];
 
-app.get("/personagens", (req, res) => {
+personagensRoutes.get("/personagens", (req, res) => {
     return res.status(200)
     .send( personagens ) 
-})
+});
