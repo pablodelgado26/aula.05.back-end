@@ -42,14 +42,14 @@ emocoesRoutes.post("/", (req, res) => {
 emocoesRoutes.get("/:id", (req, res) => {
     const { id } = req.params;
     const emocao  = emocoes.find((emotion)=> emotion.id == id)
-    if( emocao ){
+    if(!emocao ){
         return res.status(404).send({
             message: "Emoção não encontrada!"
         });
     }
     return res.status(200).send({
         message: "Emoção encontrada", 
-        emocoes,
+        emocao,
     });
 });
 
